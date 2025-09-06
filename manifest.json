@@ -1,7 +1,7 @@
 {
   "vendor": "wicommpartnerbr",
   "name": "wicomm-offer-timer-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "title": "Offer Timer",
   "description": "Custom app to show a countdown timer for special offers",
   "builders": {
