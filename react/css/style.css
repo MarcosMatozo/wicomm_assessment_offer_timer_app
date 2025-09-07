@@ -1,0 +1,67 @@
+.container {
+  background-color: #F0F0F0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.inner .left {
+  text-align: left;
+}
+.inner .timer {
+  margin-left: auto;
+  text-align: right;
+}
+.inner .title, .inner .titleDesc, .inner .timer {
+  color: #595959;
+  font-family: Poppins, sans-serif;
+}
+.inner .title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+}
+.inner .titleDesc {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.inner .timer {
+  display: flex;
+  align-items: center;
+}
+.inner .timer .block {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.inner .timer .block p {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.inner .timer .block p:first-child {
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 45px;
+  height: 45px;
+  width: 50px;
+  margin: auto;
+}
+.inner .timer .block p.dateTitle {
+  font-size: 8px;
+  text-transform: uppercase;
+}
+.inner .timer .block .divider {
+  margin: 0 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

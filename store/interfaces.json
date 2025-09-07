@@ -1,5 +1,5 @@
 {
- "teste-apaap": {
-    "component": "HelloWorld"
+ "exampleapp": {
+    "component": "OfferTimer"
   }
 }

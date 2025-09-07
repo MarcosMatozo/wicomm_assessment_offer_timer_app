@@ -1,0 +1,57 @@
+.container
+    background-color: #F0F0F0
+    color: white
+    padding: 20px
+    text-align: center
+.inner
+    max-width: 1280px
+    margin: 0 auto
+    padding-left: 3.5rem
+    padding-right: 3.5rem
+    display: flex
+    flex-wrap: nowrap
+
+    .left
+      text-align: left
+    .timer
+      margin-left: auto
+      text-align: right
+
+    .title, .titleDesc, .timer
+      color: #595959
+      font-family: Poppins, sans-serif
+
+    .title
+      font-size: 2rem
+      font-weight: 700
+      font-style: italic
+
+    .titleDesc
+      font-size: 1rem
+      font-weight: 400
+      margin-top: 4px
+
+    .timer
+      display: flex
+      align-items: center
+      .block
+        display: flex
+        flex-wrap: wrap
+        text-align: center
+        p
+          display: block
+          width: 100%
+          margin: 0
+          &:first-child
+            font-size: 1.875rem
+            font-weight: 500
+            line-height: 45px
+            height: 45px
+            width: 50px
+            margin: auto
+          &.dateTitle
+            font-size: 8px
+            text-transform: uppercase
+
+        .divider
+          margin: 0 5px
