@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react'
+
 import { useCssHandles } from 'vtex.css-handles'
 import './css/style.css'
 
 const CSS_HANDLES = ['container', 'inner', 'title', 'titleDesc', 'timer', 'left', 'block', 'divider', 'dateTitle'] as const
 
 // Define a data-alvo da promoção (formato: YYYY-MM-DDTHH:MM:SS)
-const TARGET_DATE = new Date('2025-09-12T23:59:59')
+interface OfferTimerProps {
+  targetDate?: string // formato: 'YYYY-MM-DDTHH:mm:ss'
+}
 
-function OfferTimer() {
+function OfferTimer({ targetDate = '2025-09-12T23:59:59' }: OfferTimerProps) {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const [timeLeft, setTimeLeft] = useState(getTimeRemaining(TARGET_DATE))
+  const [timeLeft, setTimeLeft] = useState(getTimeRemaining(new Date(targetDate)))
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft(getTimeRemaining(TARGET_DATE))
+      setTimeLeft(getTimeRemaining(new Date(targetDate)))
     }, 1000)
 
     return () => clearInterval(interval)
@@ -76,6 +79,21 @@ function getTimeRemaining(targetDate: Date) {
 
 function pad(num: number) {
   return num < 10 ? `0${num}` : `${num}`
+}
+
+
+OfferTimer.schema = {
+  title: 'Offer Timer',
+  description: 'Contador de ofertas com data administrável',
+  type: 'object',
+  properties: {
+    targetDate: {
+      title: 'Data alvo',
+      description: 'Data final da oferta (YYYY-MM-DDTHH:mm:ss)',
+      type: 'string',
+      default: '2025-09-12T23:59:59',
+    },
+  },
 }
 
 export default OfferTimer
